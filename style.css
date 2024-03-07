@@ -1,0 +1,123 @@
+/** COMMON CSS STARTS HERE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: aquamarine;
+    font-family: "arial";
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+/** COMMON CSS ENDS HERE */
+
+
+.cursor{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+ 
+.cursorSm{
+    pointer-events: none;
+    transition: 0.06s;
+    transform: translate(-50%,-50%);
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+nav{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 15px 0;
+}
+
+nav .navBtn{
+    padding: 15px ;
+    background-color: black;
+    color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.sidebar{
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.45);
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+
+.sidebar.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar .sidebarCnt{
+    width: 80%;
+    max-width: 350px;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+}
+
+.sidebar.active .sidebarCnt{
+    transform: translateX(0%);
+
+}
+
+
+.sidebar .sidebarCnt p{
+    padding: 100px 20px;
+    text-align: justify;
+}
+
+.sidebar .sidebarCnt .cancelBtn{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    line-height: 40px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    display: block;
+    right: 20px;
+    top: 20px;
+}
